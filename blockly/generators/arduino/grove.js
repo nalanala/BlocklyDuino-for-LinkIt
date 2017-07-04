@@ -698,8 +698,8 @@ Blockly.Arduino.grove_led_bar = function() {
   // }
 
   Blockly.Arduino.definitions_['include_grove_led_bar'] = '#include <Grove_LED_Bar.h>\n';
-  Blockly.Arduino.definitions_['define_grove_led_bar' + dropdown_pin] = 'Grove_LED_Bar __bar' + dropdown_pin + '(' + dropdown_pin + ', ' +  NextPIN + ', 0);\n';
-
+  //Blockly.Arduino.definitions_['define_grove_led_bar' + dropdown_pin] = 'Grove_LED_Bar __bar' + dropdown_pin + '(' + dropdown_pin + ', ' +  NextPIN + ', 0);\n';
+  Blockly.Arduino.definitions_['define_grove_led_bar' + dropdown_pin] = 'Grove_LED_Bar __bar' + dropdown_pin + '(' + NextPIN + ', ' +  dropdown_pin + ', 0);\n';
   Blockly.Arduino.setups_['setup_grove_led_bar' + dropdown_pin] = '__bar' + dropdown_pin + '.begin();\n';
 
   var code = '__bar' + dropdown_pin + '.setLevel(' + level + ');\n';
